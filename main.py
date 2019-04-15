@@ -10,7 +10,7 @@ def index():
     email = ""
     username_error = ""
     password_error = ""
-    verify_error = ""
+    verify_password_error = ""
     email_error = ""
     
 
@@ -49,14 +49,16 @@ def index():
         if password != verify_password:
             verify_password_error = "Passwords do not match!"
 
-        if (email != "") and ("@" not in email) and ("." not in email) :
+        if (email != "") and ("@" not in email or "." not in email):
             email_error = "This is not a valid email."
             email = ""
 
         if (not username_error) and (not password_error) and (not verify_password_error) and (not email_error):
             return redirect("/welcome?username={0}".format(username))
 
-    return render_template("index.html")
+    return render_template("index.html", username=username, email=email,
+                           username_error=username_error, password_error=password_error,
+                           verify_password_error=verify_password_error, email_error=email_error)
 
 
 @app.route("/welcome")
