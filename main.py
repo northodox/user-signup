@@ -10,6 +10,7 @@ def index():
 
 @app.route("/welcome", methods = ["POST"])
 def welcome():
+    username = request.form['username']
     return render_template('welcome-page.html')
 
 app.run()
