@@ -10,48 +10,48 @@
 
     <body>
         <h1>New User Signup</h1>
-        <form method = "POST">
+        <form method="POST">
             <table>
                 <tbody>
                     <tr>
                         <td>
-                            <label for = "username">Username</label>
+                            <label for="username">Username</label>
                         </td>
                         <td>
-                            <input name = "username" type = "text" value>
-                            <span class = "error">That's not a valid username!</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for = "password">Password</label>
-                        </td>
-                        <td>
-                            <input name = "password" type = "password">
-                            <span class = "error">That is not a valid password!</span>
+                            <input name="username" type="text" value>
+                            <span class="error">That is not a valid username!</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for = "verify">Verify Password</label>
+                            <label for="password">Password</label>
                         </td>
                         <td>
-                            <input name = "verify" type = "password">
-                            <span class = "error">Passwords do not match!</span>
+                            <input name="password" type="password">
+                            <span class="error">That is not a valid password!</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for = "email" value>Email (optional)</label>
+                            <label for="verify">Verify Password</label>
                         </td>
                         <td>
-                            <input name = "email" value>
-                            <span class = "error"></span>
+                            <input name="verify" type="password">
+                            <span class="error">Passwords do not match!</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email" value>Email (optional)</label>
+                        </td>
+                        <td>
+                            <input name="email" value>
+                            <span class="error"></span>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <input type = "submit">
+            <input type="submit">
         </form>
     </body>
 </html>
