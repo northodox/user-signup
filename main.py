@@ -50,7 +50,7 @@ def index():
             verify_password_error = "Passwords do not match!"
 
         if (email != "") and ("@" not in email or "." not in email):
-            email_error = "This is not a valid email."
+            email_error = "This is not a valid email!"
             email = ""
 
         if (not username_error) and (not password_error) and (not verify_password_error) and (not email_error):
